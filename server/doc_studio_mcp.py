@@ -48,7 +48,7 @@ def list_style_profiles() -> str:
 def generate_drawio_diagram(
     spec_json: str,
     out_drawio_path: str,
-    style_profile: str = "rpl-v17",
+    style_profile: str = "monochrome-bw",
     render_formats: str = "png,svg",
     render_scale: int = 2,
 ) -> str:
@@ -57,7 +57,7 @@ def generate_drawio_diagram(
     Args:
         spec_json: JSON string with keys: type (flowchart|architecture|dfd|erd|cd|sd|ufd|swimlane|state), title, direction (DOWN|RIGHT), nodes/edges OR participants/messages/fragments (for sd) OR lanes/nodes/edges (for swimlane/ufd).
         out_drawio_path: Destination .drawio file path.
-        style_profile: Diagram style profile (rpl-v17, ieee-q1, clean-academic, modern-tech).
+        style_profile: Diagram style profile (monochrome-bw, ieee-q1, clean-academic, pastel-structured, modern-tech).
         render_formats: Comma-separated export formats (png, svg, pdf). Empty string skips rendering.
         render_scale: PNG export scale factor (2 or 3 for crisp retina/print DPI).
     """
@@ -87,7 +87,7 @@ def validate_and_render_drawio(
 def build_word_document(
     spec_json: str,
     out_docx_path: str,
-    profile_name: str = "rpl-v17",
+    profile_name: str = "academic-proposal",
     profile_overrides_json: str = "",
     export_pdf: bool = True,
     out_pdf_path: str = "",
@@ -97,7 +97,7 @@ def build_word_document(
     Args:
         spec_json: JSON document specification with cover, front_matter, toc/lof/lot flags, body blocks (chapter, heading, paragraph, bullets, figure, table, equation, code, page_break), and optional bibliography ({bib_path, csl, title}).
         out_docx_path: Output .docx path.
-        profile_name: House style profile (rpl-v17, skripsi-unhas, tech-report-modern).
+        profile_name: House style profile (academic-proposal, academic-thesis, tech-report-modern).
         profile_overrides_json: Optional JSON dict overriding margins, fonts, sizes, spacing, or numbering for custom campus/institution formats.
         export_pdf: When true, runs Microsoft Word COM to update all TOC/page fields and export PDF with heading bookmarks.
         out_pdf_path: Optional explicit PDF output path.
@@ -157,7 +157,7 @@ def build_q1_figure_chart(
 @mcp.tool()
 def qa_inspect_pdf(
     pdf_path: str,
-    profile_name: str = "rpl-v17",
+    profile_name: str = "academic-proposal",
     render_dir: str = "",
     render_dpi: int = 150,
     max_render_pages: int = 12,

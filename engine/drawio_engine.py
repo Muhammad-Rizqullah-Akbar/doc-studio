@@ -12,7 +12,7 @@ import zlib
 from paths import build_env, resolve_binaries
 
 
-def load_diagram_style(profile_name="rpl-v17"):
+def load_diagram_style(profile_name="monochrome-bw"):
     bins = resolve_binaries()
     with open(bins["style_profiles"], encoding="utf-8") as f:
         data = json.load(f)
@@ -20,8 +20,8 @@ def load_diagram_style(profile_name="rpl-v17"):
     if profile_name in styles:
         return styles[profile_name]
     doc_prof = data.get("profiles", {}).get(profile_name, {})
-    dp = doc_prof.get("diagram_profile", "rpl-v17")
-    return styles.get(dp, styles["rpl-v17"])
+    dp = doc_prof.get("diagram_profile", "monochrome-bw")
+    return styles.get(dp, styles["monochrome-bw"])
 
 
 def _esc(text):
@@ -163,7 +163,7 @@ def _edge_style(style_cfg, edge_spec, exit_port=None, entry_port=None):
 
 
 def _make_mxfile(diagram_name, page_w, page_h, cells, grid=10):
-    mxfile = ET.Element("mxfile", {"host": "doc-studio", "agent": "xenonite-doc-studio/2.0"})
+    mxfile = ET.Element("mxfile", {"host": "doc-studio", "agent": "doc-studio/1.0"})
     diagram = ET.SubElement(mxfile, "diagram", {"id": "d1", "name": diagram_name})
     model = ET.SubElement(
         diagram,
@@ -607,7 +607,7 @@ def _generate_swimlane_diagram(spec, style_cfg):
     return xml_str, {"width": page_w, "height": page_h, "node_count": len(nodes), "edge_count": len(edges)}
 
 
-def generate_drawio(spec, out_path, style_profile="rpl-v17"):
+def generate_drawio(spec, out_path, style_profile="monochrome-bw"):
     """Generate a clean, zero-overlap .drawio diagram from a structured spec."""
     style_cfg = load_diagram_style(style_profile)
     dtype = str(spec.get("type", "flowchart")).lower()

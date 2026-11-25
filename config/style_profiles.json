@@ -1,7 +1,7 @@
 {
   "profiles": {
-    "rpl-v17": {
-      "name": "Proposal RPL Tamalate v17 Exact Baseline",
+    "academic-proposal": {
+      "name": "Formal Academic Proposal & Institutional Report (A4 Monochrome)",
       "engine": "docx",
       "page": { "size": "A4", "width_cm": 21.0, "height_cm": 29.7 },
       "margins_cm": { "left": 4.0, "right": 3.0, "top": 3.0, "bottom": 3.0 },
@@ -63,8 +63,8 @@
       "diagram_profile": "monochrome-bw",
       "qa": { "forbid_em_dash": true, "min_image_dpi": 150, "allowed_fonts": ["TimesNewRoman", "Consolas", "CambriaMath", "Cambria"] }
     },
-    "skripsi-unhas": {
-      "name": "Skripsi / Tugas Akhir Akademik Indonesia (Standar A4 4-3-4-3 / 4-3-3-3)",
+    "academic-thesis": {
+      "name": "Standard Academic Thesis / Skripsi (A4 4-3-4-3, Dual Roman/Arabic Numbering)",
       "engine": "docx",
       "page": { "size": "A4", "width_cm": 21.0, "height_cm": 29.7 },
       "margins_cm": { "left": 4.0, "right": 3.0, "top": 4.0, "bottom": 3.0 },
@@ -233,7 +233,7 @@
         "edge": "#000000"
       }
     },
-    "rpl-v17": {
+    "pastel-structured": {
       "font_primary": "Times New Roman",
       "font_mono": "Consolas",
       "title_size": 15,

@@ -110,7 +110,7 @@ def main():
 
     p_qa = sub.add_parser("qa", help="Run PyMuPDF visual & structural PDF QA")
     p_qa.add_argument("pdf")
-    p_qa.add_argument("--profile", default="rpl-v17")
+    p_qa.add_argument("--profile", default="academic-proposal")
     p_qa.add_argument("--render-dir", default="")
     p_qa.set_defaults(func=cmd_qa)
 

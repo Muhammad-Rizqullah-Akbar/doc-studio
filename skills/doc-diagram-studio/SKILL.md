@@ -15,16 +15,16 @@ description: >-
 
 ### Phase 1: Project Understanding & Living-Doc Sync (Before Writing)
 Never invent architecture, database columns, or endpoints from memory.
-1. Use `xenonite-tools` (`get_project_structure`, `get_code_outline`, `analyze_module_dependencies`, `read_targeted_snippets`) for fast targeted inspection.
+1. Inspect the codebase structure and source files first before drafting any technical specification.
 2. For broad codebase snapshots or cross-file context packing, call **`repomix`** MCP (`pack_codebase`, `read_repomix_output`, `grep_repomix_output`).
-3. Call **`doc-studio.sync_project_docs_manifest(project_dir, out_manifest_path)`** to extract deterministic Prisma ERD models, HTTP API routes, module layout, and compute doc-drift diffs against the previous manifest whenever a project has been refactored.
+3. Call **`doc-studio.sync_project_docs_manifest(project_dir, out_manifest_path)`** to extract deterministic Prisma/SQL ERD models, HTTP/OpenAPI routes, module layout, and compute doc-drift diffs against the previous manifest whenever a project has been refactored.
 4. Maintain traceability registers (`01_SOURCE_REGISTER` through `07_ERD_RELATIONSHIP_MATRIX`) as single source of truth before drafting chapters or diagrams.
 
 ### Phase 2: Format & Style Profile Locking
 1. Call **`doc-studio.list_style_profiles()`** to verify available profiles and binaries.
 2. Select the exact profile matching the target format:
-   - `rpl-v17`: A4, margins L4/R3/T3/B3 cm, Times New Roman 12pt, justify, 1.15 spacing, 1cm first-line indent, heading 14/12 bold, grid tables, chapter-scoped `Gambar X.Y` / `Tabel X.Y`, Word COM PDF export.
-   - `skripsi-unhas`: A4, margins L4/R3/T4/B3 cm, Times New Roman 12pt, 1.5 spacing, 1.25cm indent, Roman front matter (`i, ii, iii`) + Arabic main matter (`1, 2, 3`) with bottom-center on chapter opening pages and top-right on continuation pages, academic booktabs tables, APA 7 CSL.
+   - `academic-proposal`: A4, margins L4/R3/T3/B3 cm, Times New Roman 12pt, justify, 1.15 spacing, 1cm first-line indent, heading 14/12 bold, monochrome grid tables, chapter-scoped `Gambar X.Y` / `Tabel X.Y`, Word COM/LibreOffice PDF export.
+   - `academic-thesis`: A4, margins L4/R3/T4/B3 cm, Times New Roman 12pt, 1.5 spacing, 1.25cm indent, Roman front matter (`i, ii, iii`) + Arabic main matter (`1, 2, 3`) with bottom-center on chapter opening pages and top-right on continuation pages, academic booktabs tables, APA 7 CSL.
    - `ieee-q1`, `elsevier-q1`, `springer-lncs`: Q1 academic LaTeX templates via TinyTeX (`pdflatex`/`xelatex` + `bibtex`/`biber`).
    - `tech-report-modern`: Typst millisecond-compile modern architecture/audit report.
 3. For any custom campus, client, or journal format, pass `profile_overrides_json` (custom margins, fonts, sizes, line spacing, table style, CSL) or inspect the user's reference PDF with `qa_inspect_pdf` first to clone its exact geometry and font rules.
@@ -33,7 +33,7 @@ Never invent architecture, database columns, or endpoints from memory.
 Every diagram MUST remain editable (`.drawio`), crisp (2x/3x PNG + SVG/PDF vector), and strictly zero-overlap:
 1. Call **`doc-studio.generate_drawio_diagram(spec_json, out_drawio_path, style_profile, render_formats="png,svg", render_scale=2)`**:
    - Prefer `style_profile="monochrome-bw"` for clean black-and-white formal reports/proposals/theses (matching RPL v17 monochrome aesthetic).
-   - For **ERD**: ALWAYS specify exact `source_field` and `target_field` on every edge (e.g. `id` -> `from_state_id`, `id` -> `to_state_id`); the engine anchors edges directly to exact table row cells with staggered 90-degree orthogonal routing and fails loudly if any field name mismatches.
+   - For **ERD**: ALWAYS specify exact `source_field` and `target_field` on every edge (e.g. `id` -> `author_id`, `id` -> `reviewer_id`); the engine anchors edges directly to exact table row cells with staggered 90-degree orthogonal routing and fails loudly if any field name mismatches.
    - For **DFD**: the engine enforces DFD semantic rules (blocks illegal direct `external -> store` or `store -> store` flows without a process) and separates bidirectional edges cleanly.
    - Uses **ELK (`elkjs`) Sugiyama orthogonal routing** with explicit port anchors (`exitX/Y`, `entryX/Y`) and calculated bend points for `flowchart`, `architecture`, `dfd`, `erd`, `cd`, and `state`.
    - Uses dedicated deterministic zero-overlap solvers for **Sequence Diagrams (`sd`)** and **Swimlane Processes (`ufd`/`swimlane`)**.

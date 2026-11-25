@@ -25,7 +25,7 @@ ALIGN_MAP = {
 }
 
 
-def load_doc_profile(profile_name="rpl-v17", overrides=None):
+def load_doc_profile(profile_name="academic-proposal", overrides=None):
     bins = resolve_binaries()
     with open(bins["style_profiles"], encoding="utf-8") as f:
         profiles = json.load(f)["profiles"]
@@ -231,7 +231,7 @@ def _render_bibliography_entries(bib_path, csl_name, cite_keys=None):
 
 
 class PrecisionDocBuilder:
-    def __init__(self, profile_name="rpl-v17", overrides=None):
+    def __init__(self, profile_name="academic-proposal", overrides=None):
         self.prof = load_doc_profile(profile_name, overrides)
         self.doc = Document()
         self.chapter = 0
