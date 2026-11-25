@@ -1,0 +1,27 @@
+extends: existence
+message: "Hindari pleonasme atau ungkapan tidak formal '%s' dalam naskah akademik baku."
+ignorecase: true
+level: warning
+tokens:
+  - adalah merupakan
+  - agar supaya
+  - demi untuk
+  - hal ini dikarenakan
+  - di mana hal ini
+  - di mana hal tersebut
+  - yang mana
+  - dari pada
+  - berdasarkan daripada
+  - sangat \w+ sekali
+  - hanya \w+ saja
+  - banget
+  - bikin
+  - cuma
+  - enggak
+  - nggak
+  - gimana
+  - kayak
+  - makanya
+  - udah
+  - yaudah
+  - gitu

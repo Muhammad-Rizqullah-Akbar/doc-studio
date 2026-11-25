@@ -1,0 +1,19 @@
+extends: existence
+message: "Possible AI cliche or inflated phrasing: '%s'. Use direct, evidence-based academic wording."
+ignorecase: true
+level: warning
+tokens:
+  - delve(?:s|d|ing)?
+  - pivotal
+  - tapestry
+  - indelible mark
+  - serves as a testament
+  - stands as a testament
+  - evolving landscape
+  - comprehensive landscape
+  - it is worth noting that
+  - it is important to note that
+  - seamlessly
+  - game-changer
+  - cutting-edge
+  - underscores? (?:its|the) (?:importance|significance)

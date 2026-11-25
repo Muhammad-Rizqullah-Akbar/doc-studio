@@ -1,0 +1,10 @@
+# Official LibreOffice/Mozilla Hunspell Indonesian dictionary (github.com/LibreOffice/dictionaries id_ID)
+extends: spelling
+message: "Kemungkinan salah eja (KBBI/Hunspell id_ID): '%s'."
+level: suggestion
+dicpath: dictionaries
+dictionaries:
+  - id_ID
+filters:
+  - "[A-Z]{2,}"
+  - "[A-Za-z]+[0-9]+[A-Za-z0-9]*"

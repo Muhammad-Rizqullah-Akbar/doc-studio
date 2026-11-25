@@ -1,0 +1,321 @@
+{
+  "profiles": {
+    "rpl-v17": {
+      "name": "Proposal RPL Tamalate v17 Exact Baseline",
+      "engine": "docx",
+      "page": { "size": "A4", "width_cm": 21.0, "height_cm": 29.7 },
+      "margins_cm": { "left": 4.0, "right": 3.0, "top": 3.0, "bottom": 3.0 },
+      "fonts": {
+        "body": "Times New Roman",
+        "heading": "Times New Roman",
+        "caption": "Times New Roman",
+        "mono": "Consolas"
+      },
+      "sizes_pt": {
+        "body": 12.0,
+        "h1": 14.0,
+        "h2": 12.0,
+        "h3": 12.0,
+        "caption": 10.0,
+        "table": 10.0,
+        "code": 9.0
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "line_spacing": 1.15,
+        "space_before_pt": 0.0,
+        "space_after_pt": 6.0,
+        "first_line_indent_cm": 1.0,
+        "widow_control": true
+      },
+      "headings": {
+        "h1_space_before_pt": 18.0,
+        "h1_space_after_pt": 10.0,
+        "h1_align": "left",
+        "h1_uppercase": false,
+        "h2_space_before_pt": 12.0,
+        "h2_space_after_pt": 6.0,
+        "h3_space_before_pt": 8.0,
+        "h3_space_after_pt": 4.0
+      },
+      "numbering": {
+        "front_matter": "lowerRoman",
+        "main_matter": "decimal",
+        "chapter_first_page_bottom_center": false,
+        "main_position": "bottom_right",
+        "figure_prefix": "Gambar",
+        "table_prefix": "Tabel",
+        "caption_sep": " - ",
+        "caption_align": "center",
+        "chapter_scoped_captions": true
+      },
+      "table": {
+        "style": "grid",
+        "header_bg": "F3F4F6",
+        "header_bold": true,
+        "header_align": "left",
+        "border_color": "1F2937",
+        "repeat_header": true,
+        "cant_split_rows": true,
+        "cell_pad_twips": { "top": 65, "bottom": 65, "left": 100, "right": 100 }
+      },
+      "citation": { "csl": "ieee.csl" },
+      "diagram_profile": "monochrome-bw",
+      "qa": { "forbid_em_dash": true, "min_image_dpi": 150, "allowed_fonts": ["TimesNewRoman", "Consolas", "CambriaMath", "Cambria"] }
+    },
+    "skripsi-unhas": {
+      "name": "Skripsi / Tugas Akhir Akademik Indonesia (Standar A4 4-3-4-3 / 4-3-3-3)",
+      "engine": "docx",
+      "page": { "size": "A4", "width_cm": 21.0, "height_cm": 29.7 },
+      "margins_cm": { "left": 4.0, "right": 3.0, "top": 4.0, "bottom": 3.0 },
+      "fonts": {
+        "body": "Times New Roman",
+        "heading": "Times New Roman",
+        "caption": "Times New Roman",
+        "mono": "Consolas"
+      },
+      "sizes_pt": {
+        "body": 12.0,
+        "h1": 14.0,
+        "h2": 12.0,
+        "h3": 12.0,
+        "caption": 10.0,
+        "table": 10.0,
+        "code": 9.0
+      },
+      "paragraph": {
+        "alignment": "justify",
+        "line_spacing": 1.5,
+        "space_before_pt": 0.0,
+        "space_after_pt": 6.0,
+        "first_line_indent_cm": 1.25,
+        "widow_control": true
+      },
+      "headings": {
+        "h1_space_before_pt": 0.0,
+        "h1_space_after_pt": 12.0,
+        "h1_align": "center",
+        "h1_uppercase": true,
+        "h2_space_before_pt": 12.0,
+        "h2_space_after_pt": 6.0,
+        "h3_space_before_pt": 8.0,
+        "h3_space_after_pt": 4.0
+      },
+      "numbering": {
+        "front_matter": "lowerRoman",
+        "main_matter": "decimal",
+        "chapter_first_page_bottom_center": true,
+        "main_position": "top_right",
+        "figure_prefix": "Gambar",
+        "table_prefix": "Tabel",
+        "chapter_scoped_captions": true
+      },
+      "table": {
+        "style": "booktabs",
+        "header_bg": "F3F4F6",
+        "header_bold": true,
+        "border_color": "111827",
+        "repeat_header": true,
+        "cant_split_rows": true,
+        "cell_pad_twips": { "top": 80, "bottom": 80, "left": 120, "right": 120 }
+      },
+      "citation": { "csl": "apa.csl" },
+      "diagram_profile": "clean-academic",
+      "qa": { "forbid_em_dash": true, "min_image_dpi": 200, "allowed_fonts": ["TimesNewRoman", "Consolas", "CambriaMath", "Cambria"] }
+    },
+    "ieee-q1": {
+      "name": "IEEE Transactions Q1 Journal Paper (Two-Column LaTeX)",
+      "engine": "latex",
+      "template": "ieee_q1.tex",
+      "latex_compiler": "pdflatex",
+      "page": { "size": "Letter", "width_cm": 21.59, "height_cm": 27.94 },
+      "figure_widths_in": { "single_col": 3.5, "double_col": 7.16 },
+      "citation": { "csl": "ieee.csl", "bib_style": "IEEEtran" },
+      "diagram_profile": "ieee-q1",
+      "qa": { "forbid_em_dash": false, "min_image_dpi": 300, "max_overfull_hbox": 0 }
+    },
+    "elsevier-q1": {
+      "name": "Elsevier Q1 Journal Paper (elsarticle LaTeX)",
+      "engine": "latex",
+      "template": "elsevier_q1.tex",
+      "latex_compiler": "pdflatex",
+      "page": { "size": "A4", "width_cm": 21.0, "height_cm": 29.7 },
+      "figure_widths_in": { "single_col": 3.54, "double_col": 7.48 },
+      "citation": { "csl": "elsevier-harvard.csl", "bib_style": "elsarticle-num" },
+      "diagram_profile": "ieee-q1",
+      "qa": { "forbid_em_dash": false, "min_image_dpi": 300, "max_overfull_hbox": 0 }
+    },
+    "springer-lncs": {
+      "name": "Springer LNCS Conference/Journal Paper (LaTeX)",
+      "engine": "latex",
+      "template": "springer_lncs.tex",
+      "latex_compiler": "pdflatex",
+      "page": { "size": "A4", "width_cm": 21.0, "height_cm": 29.7 },
+      "figure_widths_in": { "single_col": 4.8, "double_col": 4.8 },
+      "citation": { "csl": "springer-lncs.csl", "bib_style": "splncs04" },
+      "diagram_profile": "clean-academic",
+      "qa": { "forbid_em_dash": false, "min_image_dpi": 300, "max_overfull_hbox": 0 }
+    },
+    "tech-report-modern": {
+      "name": "Modern Engineering Architecture & Audit Report (Typst / DOCX)",
+      "engine": "typst",
+      "template": "report_modern.typ",
+      "page": { "size": "A4", "width_cm": 21.0, "height_cm": 29.7 },
+      "margins_cm": { "left": 2.5, "right": 2.5, "top": 2.5, "bottom": 2.5 },
+      "fonts": {
+        "body": "Calibri",
+        "heading": "Calibri",
+        "caption": "Calibri",
+        "mono": "Consolas"
+      },
+      "sizes_pt": { "body": 10.5, "h1": 16.0, "h2": 13.0, "h3": 11.5, "caption": 9.5, "table": 9.5, "code": 8.5 },
+      "paragraph": {
+        "alignment": "left",
+        "line_spacing": 1.25,
+        "space_before_pt": 0.0,
+        "space_after_pt": 6.0,
+        "first_line_indent_cm": 0.0,
+        "widow_control": true
+      },
+      "headings": {
+        "h1_space_before_pt": 18.0,
+        "h1_space_after_pt": 8.0,
+        "h1_align": "left",
+        "h1_uppercase": false,
+        "h2_space_before_pt": 12.0,
+        "h2_space_after_pt": 5.0,
+        "h3_space_before_pt": 8.0,
+        "h3_space_after_pt": 4.0
+      },
+      "numbering": {
+        "front_matter": "lowerRoman",
+        "main_matter": "decimal",
+        "chapter_first_page_bottom_center": false,
+        "main_position": "bottom_right",
+        "figure_prefix": "Figure",
+        "table_prefix": "Table",
+        "chapter_scoped_captions": true
+      },
+      "table": {
+        "style": "booktabs",
+        "header_bg": "EFF6FF",
+        "header_bold": true,
+        "border_color": "1E3A8A",
+        "repeat_header": true,
+        "cant_split_rows": true,
+        "cell_pad_twips": { "top": 80, "bottom": 80, "left": 120, "right": 120 }
+      },
+      "citation": { "csl": "ieee.csl" },
+      "diagram_profile": "modern-tech",
+      "qa": { "forbid_em_dash": true, "min_image_dpi": 200 }
+    }
+  },
+  "diagram_styles": {
+    "monochrome-bw": {
+      "font_primary": "Times New Roman",
+      "font_mono": "Consolas",
+      "title_size": 14,
+      "node_size": 11,
+      "edge_size": 10,
+      "stroke_width": 1.6,
+      "grid": 10,
+      "palette": {
+        "process": { "fill": "#FFFFFF", "stroke": "#111111", "fontColor": "#000000" },
+        "store": { "fill": "#F3F4F6", "stroke": "#111111", "fontColor": "#000000" },
+        "external": { "fill": "#E5E7EB", "stroke": "#111111", "fontColor": "#000000" },
+        "decision": { "fill": "#FFFFFF", "stroke": "#111111", "fontColor": "#000000" },
+        "start_end": { "fill": "#F9FAFB", "stroke": "#111111", "fontColor": "#000000" },
+        "warning": { "fill": "#F3F4F6", "stroke": "#111111", "fontColor": "#000000" },
+        "table_header": { "fill": "#E5E7EB", "stroke": "#111111", "fontColor": "#000000" },
+        "table_body": { "fill": "#FFFFFF", "stroke": "#9CA3AF", "fontColor": "#000000" },
+        "key_row": "#F3F4F6",
+        "group": { "fill": "#FAFAFA", "stroke": "#4B5563", "fontColor": "#111111" },
+        "edge": "#000000"
+      }
+    },
+    "rpl-v17": {
+      "font_primary": "Times New Roman",
+      "font_mono": "Consolas",
+      "title_size": 15,
+      "node_size": 12,
+      "edge_size": 11,
+      "stroke_width": 2.0,
+      "grid": 10,
+      "palette": {
+        "process": { "fill": "#DBEAFE", "stroke": "#1D4ED8", "fontColor": "#111827" },
+        "store": { "fill": "#F3F4F6", "stroke": "#374151", "fontColor": "#111827" },
+        "external": { "fill": "#E9D5FF", "stroke": "#6B21A8", "fontColor": "#111827" },
+        "decision": { "fill": "#FEF3C7", "stroke": "#B45309", "fontColor": "#111827" },
+        "start_end": { "fill": "#D1FAE5", "stroke": "#047857", "fontColor": "#111827" },
+        "warning": { "fill": "#FCE4D6", "stroke": "#B45309", "fontColor": "#111827" },
+        "table_header": { "fill": "#FFF7ED", "stroke": "#1F2937", "fontColor": "#111827" },
+        "table_body": { "fill": "#FFFFFF", "stroke": "#D1D5DB", "fontColor": "#111827" },
+        "group": { "fill": "#F9FAFB", "stroke": "#9CA3AF", "fontColor": "#1F2937" },
+        "edge": "#1A1A1A"
+      }
+    },
+    "ieee-q1": {
+      "font_primary": "Times New Roman",
+      "font_mono": "Consolas",
+      "title_size": 13,
+      "node_size": 11,
+      "edge_size": 10,
+      "stroke_width": 1.5,
+      "grid": 10,
+      "palette": {
+        "process": { "fill": "#E6F0FA", "stroke": "#005A9C", "fontColor": "#111111" },
+        "store": { "fill": "#F2F2F2", "stroke": "#333333", "fontColor": "#111111" },
+        "external": { "fill": "#FFF2CC", "stroke": "#8C6D00", "fontColor": "#111111" },
+        "decision": { "fill": "#FCE5CD", "stroke": "#B45F06", "fontColor": "#111111" },
+        "start_end": { "fill": "#D9EAD3", "stroke": "#274E13", "fontColor": "#111111" },
+        "warning": { "fill": "#F4CCCC", "stroke": "#990000", "fontColor": "#111111" },
+        "table_header": { "fill": "#E8EEF5", "stroke": "#1F2937", "fontColor": "#111111" },
+        "table_body": { "fill": "#FFFFFF", "stroke": "#CBD5E1", "fontColor": "#111111" },
+        "group": { "fill": "#FAFAFA", "stroke": "#666666", "fontColor": "#111111" },
+        "edge": "#111111"
+      }
+    },
+    "clean-academic": {
+      "font_primary": "Times New Roman",
+      "font_mono": "Consolas",
+      "title_size": 14,
+      "node_size": 11,
+      "edge_size": 10,
+      "stroke_width": 1.75,
+      "grid": 10,
+      "palette": {
+        "process": { "fill": "#FFFFFF", "stroke": "#1E3A8A", "fontColor": "#111827" },
+        "store": { "fill": "#F8FAFC", "stroke": "#334155", "fontColor": "#111827" },
+        "external": { "fill": "#F5F3FF", "stroke": "#5B21B6", "fontColor": "#111827" },
+        "decision": { "fill": "#FFFBEB", "stroke": "#92400E", "fontColor": "#111827" },
+        "start_end": { "fill": "#ECFDF5", "stroke": "#065F46", "fontColor": "#111827" },
+        "warning": { "fill": "#FEF2F2", "stroke": "#991B1B", "fontColor": "#111827" },
+        "table_header": { "fill": "#EFF6FF", "stroke": "#1E3A8A", "fontColor": "#111827" },
+        "table_body": { "fill": "#FFFFFF", "stroke": "#CBD5E1", "fontColor": "#111827" },
+        "group": { "fill": "#F8FAFC", "stroke": "#94A3B8", "fontColor": "#0F172A" },
+        "edge": "#1F2937"
+      }
+    },
+    "modern-tech": {
+      "font_primary": "Segoe UI",
+      "font_mono": "Consolas",
+      "title_size": 15,
+      "node_size": 12,
+      "edge_size": 10,
+      "stroke_width": 1.75,
+      "grid": 10,
+      "palette": {
+        "process": { "fill": "#EFF6FF", "stroke": "#2563EB", "fontColor": "#0F172A" },
+        "store": { "fill": "#F1F5F9", "stroke": "#475569", "fontColor": "#0F172A" },
+        "external": { "fill": "#FAF5FF", "stroke": "#7C3AED", "fontColor": "#0F172A" },
+        "decision": { "fill": "#FEFCE8", "stroke": "#CA8A04", "fontColor": "#0F172A" },
+        "start_end": { "fill": "#ECFDF5", "stroke": "#059669", "fontColor": "#0F172A" },
+        "warning": { "fill": "#FFF1F2", "stroke": "#E11D48", "fontColor": "#0F172A" },
+        "table_header": { "fill": "#E0F2FE", "stroke": "#0369A1", "fontColor": "#0F172A" },
+        "table_body": { "fill": "#FFFFFF", "stroke": "#CBD5E1", "fontColor": "#0F172A" },
+        "group": { "fill": "#F8FAFC", "stroke": "#64748B", "fontColor": "#0F172A" },
+        "edge": "#334155"
+      }
+    }
+  }
+}

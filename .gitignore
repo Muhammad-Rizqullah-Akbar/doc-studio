@@ -1,0 +1,41 @@
+# Python & virtual environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Node & ELK dependencies (installed by scripts/install.*)
+layout/node_modules/
+
+# Downloaded portable binaries & generated configs
+bin/*.exe
+bin/vale
+bin/harper-cli
+bin/typst
+bin/_tmp_*
+mcp_config.json
+
+# Downloaded upstream Vale packages & dictionaries (fetched by scripts/install.*)
+vale/dictionaries/
+vale/sources/
+vale/styles/write-good/
+vale/styles/proselint/
+vale/styles/Google/
+vale/styles/DocStudio/KBBIBakuID.yml
+
+# Test & build outputs
+tests/_*/
+*.pdf
+*.docx
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.toc
+.DS_Store
+Thumbs.db

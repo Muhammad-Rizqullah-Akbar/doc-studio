@@ -1,0 +1,14 @@
+extends: existence
+message: "Terdeteksi frasa klise bergaya AI: '%s'. Ganti dengan kalimat akademik yang langsung dan terukur."
+ignorecase: true
+level: warning
+tokens:
+  - dalam era digital yang terus berkembang
+  - memainkan peran (?:yang )?(?:sangat )?(?:krusial|vital)
+  - sebagai bukti nyata
+  - lanskap yang terus berubah
+  - penting untuk dicatat bahwa
+  - patut dicatat bahwa
+  - secara mulus
+  - secara komprehensif dan holistik
+  - menjadi tonggak penting

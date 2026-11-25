@@ -1,0 +1,10 @@
+extends: existence
+message: "Singkatan/tanda baca tidak sesuai EYD V pada naskah Bahasa Indonesia: '%s'."
+ignorecase: false
+level: suggestion
+tokens:
+  - \betc\.
+  - \be\.g\.
+  - \bi\.e\.
+  - \bvs\.
+  - \s+[,.;:!?]

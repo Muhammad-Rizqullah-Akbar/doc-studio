@@ -1,0 +1,78 @@
+\documentclass[journal]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{siunitx}
+\usepackage{microtype}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cite}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\title{Deterministic Software Architecture and Automated Governance Workflow for Public Administration Systems}
+
+\author{First~Author,~\IEEEmembership{Member,~IEEE,}
+        and~Second~Author,~\IEEEmembership{Senior~Member,~IEEE}%
+\thanks{Manuscript received Month DD, YYYY; revised Month DD, YYYY.}%
+\thanks{Authors are with the Department of Informatics Engineering, Hasanuddin University, Makassar, Indonesia.}}
+
+\maketitle
+
+\begin{abstract}
+This template establishes a Q1 IEEE Transactions baseline with strict two-column typography, vector figure embedding, booktabs tables, microtype protrusion, and zero overfull horizontal box tolerance. Replace this abstract with a structured 150--250 word summary covering context, problem gap, proposed method, empirical evaluation, and key quantitative gains.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Software architecture, workflow automation, formal verification, empirical evaluation.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\IEEEPARstart{M}{odern} public administration platforms require deterministic workflow enforcement, verifiable audit trails, and reproducible technical documentation. Prior approaches frequently suffer from divergence between system implementation and published architectural specifications.
+
+Our primary contributions are threefold:
+\begin{enumerate}
+  \item A configuration-driven state machine decoupling institutional SOP rules from core engine code.
+  \item A hash-chained audit ledger ensuring tamper-evident governance verification.
+  \item An empirical evaluation across representative workload profiles demonstrating low-latency compliance.
+\end{enumerate}
+
+\section{Methodology}
+The end-to-end validation metric combines latency $L_i$ and compliance accuracy $A_i$ across $N$ evaluated service workflows:
+\begin{equation}
+  S = \frac{1}{N} \sum_{i=1}^{N} \left( \alpha A_i - \beta \frac{L_i}{L_{\max}} \right),
+  \label{eq:score}
+\end{equation}
+where $\alpha, \beta \in (0, 1]$ weight correctness against bounded service-level response time $L_{\max}$.
+
+\begin{table}[!t]
+\centering
+\caption{Quantitative Comparison Across Evaluated Baselines}
+\label{tab:results}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Method & Latency (ms) & Accuracy (\%) & Memory (MB) \\
+\midrule
+Baseline Monolith & 142.4 $\pm$ 8.1 & 91.2 & 412 \\
+Rule-Engine v1    & 68.7 $\pm$ 4.3  & 96.4 & 248 \\
+\textbf{Proposed} & \textbf{24.1 $\pm$ 1.9} & \textbf{99.4} & \textbf{164} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Experimental Results}
+As reported in Table~\ref{tab:results}, the proposed architecture achieves a $5.9\times$ reduction in median latency while elevating compliance accuracy to $99.4\%$. All measurements adhere to Eq.~(\ref{eq:score}).
+
+\section{Conclusion}
+We presented a reproducible Q1 IEEE manuscript baseline ready for vector figures, BibTeX references, and automated visual quality verification.
+
+\end{document}
