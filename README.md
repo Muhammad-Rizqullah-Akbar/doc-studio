@@ -1,75 +1,190 @@
-# Doc-Studio
+<div align="center">
 
-**100% Free, Zero-Signup, Portable Precision Document, Thesis (Skripsi), Q1 Journal Paper, Zero-Overlap Draw.io Diagram, KBBI/Vale/Harper Prose QA, and Codebase-Synced Living Docs Studio (MCP Server + CLI + Agent Skills).**
+# 📄 DOC-STUDIO
+### *100% Free, Zero-Signup, Portable Precision Document, Thesis (Skripsi), Q1 Journal Paper, Zero-Overlap Draw.io Diagram & KBBI/Vale/Harper Prose QA MCP Studio*
 
-Designed to run identically on any Windows, macOS, or Linux machine with **Antigravity, Claude Code, Cursor, Codex, or Hermes** — zero paid APIs, zero cloud lock-in, zero hardcoded local paths.
+[![Author: Muhammad-Rizqullah-Akbar](https://img.shields.io/badge/Author-Muhammad--Rizqullah--Akbar-00F0FF?style=for-the-badge&logo=github&logoColor=black)](https://github.com/Muhammad-Rizqullah-Akbar)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-%3E%3D3.10-3776ab?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![MCP Native](https://img.shields.io/badge/MCP%20Tools-12%20Native%20%2B%20Repomix%20%2B%20Draw.io-7952b3?style=for-the-badge)](https://modelcontextprotocol.io/)
+[![Zero-Signup](https://img.shields.io/badge/Cost-100%25%20Free%20%7C%20Zero%20Signup-00C853?style=for-the-badge)](THIRD_PARTY_NOTICES.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=for-the-badge)](CONTRIBUTING.md)
 
-## Capabilities
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=760&lines=Zero-Overlap+ELK+Draw.io+Diagrams+%7C+Row-Level+ERD+PK-%3EFK;Word+COM+Auto-TOC%2FLOF%2FLOT+%7C+Q1+LaTeX+%7C+Typst;Offline+KBBI+1413+Pairs+%2B+Hunspell+id_ID+%2B+Vale+%2B+Harper;Zero-API-Key+Crossref+%2B+OpenAlex+Citation+Verifier" alt="Doc-Studio Banner" />
+</p>
 
-1. **Zero-Overlap Draw.io Diagram Engine (`elkjs` + Draw.io CLI + `@drawio/mcp`)**
-   - Sugiyama orthogonal routing with explicit ports & diamond vertex snapping (`flowchart`, `architecture`, `dfd`, `erd`, `cd`, `state`).
-   - Exact **row-level ERD PK -> FK pointers** (including staggered 90-degree orthogonal dual-FK routing) with fail-loud field name validation.
-   - **DFD semantic guard** (forbids illegal direct `external -> store` / `store -> store` flows) + clean bidirectional arrow separation.
-   - Deterministic **Sequence Diagram (`sd`)** & **Swimlane (`ufd`/`swimlane`)** solvers.
-   - Monochrome B&W (`monochrome-bw`), `ieee-q1`, `clean-academic`, `rpl-v17`, and `modern-tech` diagram palettes + strict geometric zero-overlap validator.
+[Why Doc-Studio](#-why-doc-studio) • [Architecture](#-system-architecture--5-phase-pipeline) • [Fitur Utama](#-fitur-utama) • [Quickstart](#-quickstart-3-minute-setup) • [12 MCP Tools](#-complete-12-mcp-tool-reference) • [Style & Sumber Otoritatif](#-style-profiles--sumber-open-source-otoritatif) • [CLI Reference](#-cli-command-reference) • [Contributing](#-komunitas-kontribusi--roadmap)
 
-2. **Precision Document Engine (Word COM / LibreOffice + TinyTeX Q1 LaTeX + Typst)**
-   - Modular style profiles (`rpl-v17`, `skripsi-unhas`, `ieee-q1`, `elsevier-q1`, `springer-lncs`, `tech-report-modern`) + arbitrary JSON overrides for any campus/institution format.
-   - Word `.docx`: exact margins/fonts/spacing, dual Roman (`i, ii`) & Arabic (`1, 2`) sections, auto-height figure capping (caption never splits across pages), `colspan`/`rowspan` merged tables with `tblHeader` & `cantSplit`, monochrome callout boxes, aligned `signature_grid` (Lembar Pengesahan), OMML equations, `docxtpl` official template injection, and Word COM auto-update for **Daftar Isi, Daftar Gambar, and Daftar Tabel**.
-   - Q1 LaTeX templates (`IEEEtran`, `elsarticle`, `springer-lncs`) + **Typst** modern engineering report + **Matplotlib** Q1 colorblind-safe Okabe-Ito vector figures (PDF/SVG/600 DPI PNG).
-   - **PyMuPDF Visual & Structural PDF QA Gate**: checks page geometry, embedded fonts, image DPI, blank pages, margin overflow, orphan headings, broken references, and renders page PNGs for visual inspection.
+---
+</div>
 
-3. **Authoritative Offline Prose QA & Zero-Signup Citations**
-   - **Indonesian KBBI / EYD V**: 1,413 verified `tidak-baku -> baku` pairs from `lantip/baku-tidak-baku` (KBBI / Ivan Lanin) + official **LibreOffice Hunspell `id_ID`** dictionary via `Vale`.
-   - **English Q1 Prose**: official `errata-ai` Vale packages (`write-good`, `proselint`, `Google`) + **Automattic `Harper` CLI** (Rust offline grammar) + **`ChkTeX`** (LaTeX typography).
-   - **Unicode Hygiene, Burstiness & Local 5-Gram Reference Overlap Check** (100% offline).
-   - **Free Zero-Signup Citation Engine**: reads local Mendeley `.bib` exports, verifies DOIs & retractions against **Crossref + OpenAlex**, and searches 270M+ scholarly works via **OpenAlex + arXiv**.
+> [!NOTE]
+> **AI-Assisted Documentation:** Dokumentasi `README.md` ini disusun bersama AI berdasarkan struktur kode aktual, modul MCP, profil gaya, template, dan rangkaian pengujian terverifikasi di dalam repositori ini.
 
-4. **Living Project Sync**
-   - Deterministic codebase scanner (`Prisma`, `SQL DDL`, `OpenAPI/Swagger`, `NestJS`, `FastAPI`, `Express`) + `repomix` MCP integration for fast documentation updates after major refactoring.
+> [!IMPORTANT]
+> **100% Free, Zero-Signup, Local-First Publishing Studio:** Doc-Studio mengubah AI coding agent (Antigravity, Claude Code, Cursor, Codex, Hermes) menjadi mesin penulisan dan diagram teknis berpresisi tinggi untuk **Proposal, Laporan, Skripsi/Tugas Akhir, Dokumentasi Proyek, hingga Paper Jurnal Q1 (IEEE, Elsevier, Springer LNCS)**. Seluruh proses berjalan lokal di mesinmu tanpa API key berbayar, tanpa unggah naskah ke server pihak ketiga, dan tetap sinkron otomatis saat codebase mengalami perombakan besar.
 
-## Quick Portable Install
+---
 
-### Windows (PowerShell)
+## 🎯 Why Doc-Studio?
+
+Menulis dokumen formal dan diagram teknis berbantu AI biasanya gagal di 5 titik krusial:
+1. **Diagram Berantakan & Salah Tunjuk:** Garis panah tumpang tindih menembus kotak, relasi ERD hanya menunjuk kotak tabel (bukan baris PK -> FK spesifik), atau DFD melanggar aturan aliran data baku.
+2. **Formatting & Layout Rapuh:** Margin meleset, font campur aduk, caption gambar terpisah ke halaman berikutnya, tabel terbelah di tengah baris, serta Daftar Isi / Daftar Gambar / Daftar Tabel tidak sinkron dengan nomor halaman PDF.
+3. **Bahasa Kaku & Tidak Baku:** Naskah penuh klise AI (*AI-slop*), kesalahan kata tidak baku KBBI/EYD V pada skripsi Indonesia, atau grammar halus & typo tipografi LaTeX pada paper Q1 Inggris.
+4. **Sitasi Halusinasi:** AI sering mengarang DOI, tahun terbit, atau mengutip paper yang sudah diretraksi (*retracted*).
+5. **Doc-Drift Setelah Refactor:** Saat skema database atau endpoint API berubah drastis, diagram dan bab laporan tertinggal dari implementasi nyata.
+
+**Doc-Studio** menyelesaikan kelimanya melalui satu plugin MCP portable (**12 native tools** + integrasi **Repomix MCP** & **Official `@drawio/mcp`**) serta CLI 1-perintah lintas OS.
+
+---
+
+## 🏗️ System Architecture & 5-Phase Pipeline
+
+```mermaid
+flowchart TD
+    Repo["Codebase & Mendeley .bib"] --> P1["Phase 1: Project Sync & Recon\n(sync_project_docs_manifest + Repomix MCP)"]
+    P1 --> P2["Phase 2: Style Profile Lock\n(rpl-v17 | skripsi-unhas | ieee-q1 | elsevier-q1 | typst)"]
+    P2 --> P3["Phase 3: Zero-Overlap Diagrams & Figures\n(elkjs Orthogonal + SD/Swimlane + Draw.io CLI + Matplotlib Q1)"]
+    P3 --> P4["Phase 4: Precision Assembly\n(Word COM Auto-TOC/LOF/LOT | TinyTeX | Typst | docxtpl)"]
+    P4 --> P5["Phase 5: Multi-Layer QA Gate\n(PyMuPDF Visual QA + Vale KBBI/write-good + Harper + ChkTeX + Crossref/OpenAlex)"]
+    P5 --> Out["Publication-Ready Deliverable\n(.docx + .pdf + Editable .drawio + Vector SVG/PDF)"]
+```
+
+---
+
+## 🌟 Fitur Utama
+
+- 📐 **Zero-Overlap Draw.io Diagram Engine:** Routing ortogonal Sugiyama via `elkjs`, snapping sudut rhombus, solver deterministik **Sequence Diagram (`sd`)** & **Swimlane (`ufd`/`swimlane`)**, validasi geometris anti-tabrakan (`node_overlap == 0`, `edge_crosses_node == 0`), plus dukungan palet **`monochrome-bw`** hitam-putih bersih dan `ieee-q1`.
+- 🔗 **Row-Level ERD & Semantic DFD Guard:** Relasi ERD menunjuk tepat ke **sel baris PK -> FK** (termasuk jalur ortogonal 90 derajat bertingkat untuk dual-FK seperti `from_state_id` & `to_state_id`) dengan *fail-loud validation* jika nama kolom salah. DFD menolak otomatis aliran ilegal (*external -> store* / *store -> store*) tanpa melalui proses.
+- 📝 **Precision Word (`.docx` -> PDF) Engine:** Profil adaptif (`rpl-v17`, `skripsi-unhas`, `tech-report-modern`, atau *JSON override* bebas), penomoran halaman ganda Romawi (`i, ii`) & Arab (`1, 2`), auto-height cap gambar agar caption tidak pernah pindah halaman, tabel `colspan`/`rowspan` dengan `w:tblHeader` + `w:cantSplit`, kotak `callout`, `signature_grid` (Lembar Pengesahan), persamaan matematika OMML, injeksi template `.docx` resmi via `docxtpl`, serta **Word COM `Fields.Update()`** otomatis (dengan fallback LibreOffice headless di Linux/macOS).
+- 🎓 **Q1 Academic Paper & Vector Figure Suite:** Template siap compile **IEEE Transactions (`IEEEtran`)**, **Elsevier (`elsarticle`)**, **Springer LNCS**, dan **Typst** modern, lengkap dengan generator grafik ilmiah **Matplotlib** (lebar kolom IEEE/Elsevier presisi, TrueType font embed, palet colorblind-safe Okabe-Ito, PDF/SVG/600 DPI PNG).
+- 📚 **Authoritative Offline Prose QA (Indonesia & Inggris):**
+  - **Bahasa Indonesia Baku:** 1.413 pasang kata tidak baku -> baku dari `lantip/baku-tidak-baku` (KBBI & Ivan Lanin) + kamus resmi Hunspell **`LibreOffice/dictionaries` (`id_ID`)** via `Vale`, plus deteksi pleonasme & klise AI Indonesia.
+  - **Bahasa Inggris Q1:** Paket resmi `errata-ai` Vale (**`write-good`**, **`proselint`**, **`Google`**) + **`Harper CLI`** (Rust offline grammar) + **`ChkTeX`** (tipografi LaTeX).
+  - **Hygiene & Overlap Lokal:** Pembersih karakter Unicode tak terlihat (`U+200B/C/D`, `U+FEFF`), analisis ritme kalimat (*burstiness*), dan cek kemiripan 5-gram lokal terhadap file referensi milikmu sendiri.
+- 🔍 **Zero-Signup Citation Verifier & Mendeley `.bib` Bridge:** Baca langsung file `.bib` ekspor Mendeley Reference Manager, verifikasi DOI/judul/tahun/status retraksi ke **Crossref & OpenAlex**, serta cari 270 juta+ paper ilmiah via **OpenAlex & arXiv** tanpa akun maupun API key.
+- 🔄 **Living Project Sync:** Pindai otomatis skema **Prisma**, **SQL DDL (`CREATE TABLE`)**, **OpenAPI/Swagger JSON**, serta rute **NestJS / FastAPI / Express** menjadi manifest traceability + deteksi *drift* setelah refactor.
+
+---
+
+## 🚀 Quickstart (3-Minute Setup)
+
+### Prasyarat
+- **Python >= 3.10** (disarankan `uv` terpasang) & **Node.js >= 18**
+- **Draw.io Desktop** (untuk render PNG/SVG/PDF headless) & **Pandoc** (untuk konversi sitasi CSL & OMML)
+- *(Opsional untuk PDF Word/LaTeX)* Microsoft Word (Windows) atau LibreOffice (Linux/macOS), serta TinyTeX/TeX Live untuk kompilasi LaTeX Q1.
+
+### 1. Clone & Jalankan 1-Command Installer
+
+**Windows (PowerShell):**
 ```powershell
 git clone https://github.com/Muhammad-Rizqullah-Akbar/doc-studio.git
 cd doc-studio
 powershell -ExecutionPolicy Bypass -File scripts/install.ps1
 ```
 
-### macOS / Linux
+**macOS / Linux:**
 ```bash
 git clone https://github.com/Muhammad-Rizqullah-Akbar/doc-studio.git
 cd doc-studio
 bash scripts/install.sh
 ```
 
-The installer automatically:
-- Creates an isolated `.venv` (`uv sync` or `python -m venv`)
-- Installs `elkjs`, `repomix`, and `@drawio/mcp`
-- Downloads portable `Vale`, `Harper CLI`, `Typst`, 6 official CSL styles, `LibreOffice/dictionaries` `id_ID`, `lantip/baku-tidak-baku` KBBI dataset, and runs `vale sync` for `write-good`, `proselint`, and `Google`
-- Generates a ready-to-use local `mcp_config.json` with your machine's exact paths
+Installer otomatis membuat `.venv`, memasang `elkjs`, `repomix`, `@drawio/mcp`, mengunduh biner portable (`Vale`, `Harper CLI`, `Typst`), 6 style CSL resmi, kamus Hunspell `LibreOffice id_ID`, dataset KBBI `lantip/baku-tidak-baku`, menyinkronkan paket `errata-ai` Vale (`write-good`, `proselint`, `Google`), dan menghasilkan `mcp_config.json` sesuai mesin lokalmu.
 
-## CLI Usage
+### 2. Hubungkan ke AI Coding Agent
+- **Antigravity IDE:** Salin atau symlink folder repo ke `~/.gemini/config/plugins/doc-studio`, lalu aktifkan `"doc-studio": { "enabled": true }` di `~/.gemini/config/config.json` dan reload tab.
+- **Claude Code / Cursor / Codex / Hermes:** Impor isi `mcp_config.json` yang baru dibuat installer ke konfigurasi MCP klienmu.
+
+---
+
+## 🛠️ Complete 12 MCP Tool Reference
+
+Selain companion server **`repomix`** (6 tools) dan **`drawio`** (`@drawio/mcp`, 8 tools), server `doc-studio` mengekspos **12 tool modular**:
+
+| # | Tool Name | Fungsi Utama |
+|---|---|---|
+| 1 | `list_style_profiles` | Daftar profil dokumen/diagram + status biner & CSL lokal |
+| 2 | `generate_drawio_diagram` | Generate `.drawio` zero-overlap (ELK orthogonal / SD / Swimlane / Row-Level ERD / Semantic DFD) + render PNG/SVG/PDF |
+| 3 | `validate_and_render_drawio` | Validasi geometris anti-overlap & render file `.drawio` mana pun |
+| 4 | `build_word_document` | Bangun `.docx` presisi (`colspan`/`rowspan`, callout, signature grid, OMML, CSL) + finalisasi Word COM Auto-TOC/LOF/LOT -> PDF |
+| 5 | `render_docx_template` | Isi template `.docx` resmi kampus/instansi via `docxtpl` + ekspor PDF |
+| 6 | `build_latex_or_typst_pdf` | Scaffold & compile paper Q1 LaTeX (TinyTeX + BibTeX/Biber + cek overfull hbox) atau Typst |
+| 7 | `build_q1_figure_chart` | Grafik ilmiah Matplotlib Q1 (Okabe-Ito colorblind-safe, TrueType embed, PDF/SVG/600 DPI PNG) |
+| 8 | `qa_inspect_pdf` | Audit PDF PyMuPDF (margin, font, DPI gambar, blank page, orphan heading, broken ref) + render PNG halaman |
+| 9 | `sync_project_docs_manifest` | Ekstraksi deterministik Prisma/SQL ERD, rute API/OpenAPI, modul, dan *drift diff* pasca refactor |
+| 10 | `audit_prose_and_hygiene` | Audit 100% offline: Vale (KBBI/Hunspell `id_ID` atau `write-good`/`proselint`/`Google`), Harper, ChkTeX, Unicode sanitizer, burstiness, & local 5-gram overlap |
+| 11 | `verify_bib_citations` | Verifikasi `.bib` (termasuk ekspor Mendeley) terhadap Crossref & OpenAlex (DOI, judul, tahun, status retraksi) |
+| 12 | `search_scholarly_papers` | Cari paper ilmiah asli di OpenAlex (270M+ karya) / arXiv tanpa API key dan ekspor BibTeX valid |
+
+---
+
+## 🎨 Style Profiles & Sumber Open-Source Otoritatif
+
+### Profil Dokumen Bawaan (`config/style_profiles.json`)
+| Profile | Engine | Karakteristik Utama |
+|---|---|---|
+| `rpl-v17` | Word COM | A4 (L4/R3/T3/B3 cm), Times New Roman 12pt, 1.15 spasi, tabel monokrom bersih, diagram `monochrome-bw`, auto Daftar Isi/Gambar/Tabel |
+| `skripsi-unhas` | Word COM | A4 (L4/R3/T4/B3 cm), 1.5 spasi, halaman Romawi (`i, ii`) + Arab (`1, 2`) beda halaman awal bab, tabel `booktabs`, APA 7 CSL |
+| `ieee-q1` | LaTeX | IEEE Transactions 2 kolom (`IEEEtran`), `booktabs`, `microtype`, `overfull_hbox == 0` |
+| `elsevier-q1` | LaTeX | Elsevier `elsarticle` preprint/journal template |
+| `springer-lncs` | LaTeX | Springer LNCS-compatible geometry & typography |
+| `tech-report-modern` | Typst | Kompilasi milidetik, header modern, tabel & outline otomatis |
+
+### Sumber Upstream Terpercaya (Diunduh Otomatis Saat Install)
+- **KBBI Kata Baku/Tidak Baku (1.413 pasang):** `lantip/baku-tidak-baku` (KBBI & Ivan Lanin)
+- **Spellcheck Bahasa Indonesia:** `LibreOffice/dictionaries` (`id_ID.dic` & `id_ID.aff`)
+- **Prose Linters Inggris:** `errata-ai/vale` (`write-good`, `proselint`, `Google`) + `Automattic/harper`
+- **Style Sitasi (6 CSL):** `citation-style-language/styles` (`apa`, `ieee`, `springer-lncs`, `elsevier-harvard`, `elsevier-vancouver`, `acm-sig-proceedings`)
+- **Database Sitasi Publik:** Crossref Public REST API, OpenAlex Public API, arXiv Public API
+
+---
+
+## 💻 CLI Command Reference
+
 ```bash
-# Verify all 14 tools & styles
+# Cek kesehatan seluruh 14 biner & 6 style CSL
 .venv/Scripts/python engine/cli.py doctor
 
-# Audit Indonesian (KBBI + Hunspell id_ID) or English Q1 (write-good + proselint + Google + Harper)
-.venv/Scripts/python engine/cli.py audit draft.md --lang id --clean
+# Audit Bahasa Indonesia (KBBI 1.413 pasang + Hunspell id_ID + Pleonasme + AI-Slop)
+.venv/Scripts/python engine/cli.py audit draft_skripsi.docx --lang id --clean
 
-# Verify Mendeley/BibTeX citations against Crossref & OpenAlex (zero API key)
+# Audit Paper Q1 Inggris (write-good + proselint + Google + Harper + ChkTeX)
+.venv/Scripts/python engine/cli.py audit paper_ieee.tex --lang en
+
+# Verifikasi file .bib ekspor Mendeley ke Crossref & OpenAlex (0 API key)
 .venv/Scripts/python engine/cli.py verify-bib refs.bib
 
-# Search OpenAlex/arXiv and append verified BibTeX
+# Cari paper ilmiah asli dari OpenAlex dan tambahkan ke refs.bib
 .venv/Scripts/python engine/cli.py search-papers "workflow state machine audit" --append-bib refs.bib
 
-# Scan codebase into traceability manifest & ERD spec
-.venv/Scripts/python engine/cli.py sync /path/to/repo --out manifest.json
+# Sinkronisasi codebase (Prisma / SQL / OpenAPI / NestJS / FastAPI) ke manifest traceability
+.venv/Scripts/python engine/cli.py sync /path/to/project --out manifest.json
 
-# Visual & structural PDF QA
-.venv/Scripts/python engine/cli.py qa output.pdf --profile rpl-v17 --render-dir qa_pages
+# Audit visual & struktural PDF + render PNG halaman
+.venv/Scripts/python engine/cli.py qa Proposal_Final.pdf --profile rpl-v17 --render-dir qa_pages
 ```
 
-## License
-MIT License. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for upstream open-source attributions.
+---
+
+## 🤝 Komunitas, Kontribusi & Roadmap
+
+Proyek ini dikembangkan secara terbuka dan menerima kontribusi dari komunitas pengembang dan akademisi:
+
+- 💡 **Diskusi Ide & Format Kampus Baru:** [GitHub Discussions](https://github.com/Muhammad-Rizqullah-Akbar/doc-studio/discussions)
+- 🐛 **Pelaporan Masalah / Bug:** [GitHub Issues](https://github.com/Muhammad-Rizqullah-Akbar/doc-studio/issues)
+- 📬 **Kontak Author:** `inirizqullahakbar@gmail.com`
+- 🛠️ **Panduan Kontribusi:** Lihat [CONTRIBUTING.md](CONTRIBUTING.md)
+
+### 🎯 Roadmap Pengembangan
+- 📦 **PyPI & Homebrew Distribution:** Kemasan instalasi 1-baris `uv tool install doc-studio`.
+- 🏫 **Community Thesis Profile Pack:** Koleksi profil format skripsi kampus Indonesia (UI, ITB, UGM, ITS, Unhas, Undip) dan jurnal Q1 ACM/Nature.
+- 🧪 **Automated CI Matrix:** GitHub Actions untuk pengujian lintas OS (Windows, macOS, Linux) pada setiap pull request.
+
+---
+
+## 📜 Lisensi & Atribusi
+
+Didistribusikan di bawah lisensi **MIT License**. Hak Cipta (c) 2026 **Muhammad-Rizqullah-Akbar & Kontributor**. Lihat [LICENSE](LICENSE) dan [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) untuk rincian lisensi dan atribusi proyek open-source upstream.
